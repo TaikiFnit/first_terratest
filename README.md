@@ -1,5 +1,7 @@
 - tutorial: https://terratest.gruntwork.io/docs/getting-started/quick-start/
 
+:memo: 初回実行
+
 ```
 % cd test
 % go mod init "github.com/TaikiFnit/first_terratest"
@@ -172,4 +174,14 @@ TestTerraformBasicExample 2023-08-29T12:41:17+09:00 logger.go:66: Destroy comple
 --- PASS: TestTerraformBasicExample (2.98s)
 PASS
 ok  	github.com/TaikiFnit/first_terratest	3.292s
+```
+
+すでにapply済みのリソースをそのままのstateでテストすると再apply&destroy
+
+```
+TestTerraformBasicExample 2023-08-29T12:51:57+09:00 logger.go:66: Plan: 2 to add, 0 to change, 2 to destroy.
+TestTerraformBasicExample 2023-08-29T12:51:57+09:00 logger.go:66: Apply complete! Resources: 2 added, 0 changed, 2 destroyed.
+...
+TestTerraformBasicExample 2023-08-29T12:51:58+09:00 logger.go:66: Plan: 0 to add, 0 to change, 2 to destroy.
+TestTerraformBasicExample 2023-08-29T12:51:58+09:00 logger.go:66: Destroy complete! Resources: 2 destroyed.
 ```
