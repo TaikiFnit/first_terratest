@@ -1,6 +1,6 @@
 - tutorial: https://terratest.gruntwork.io/docs/getting-started/quick-start/
 
-:memo: 初回実行
+:memo: "basic" 初回実行
 
 ```
 % cd test
@@ -185,3 +185,4 @@ TestTerraformBasicExample 2023-08-29T12:51:57+09:00 logger.go:66: Apply complete
 TestTerraformBasicExample 2023-08-29T12:51:58+09:00 logger.go:66: Plan: 0 to add, 0 to change, 2 to destroy.
 TestTerraformBasicExample 2023-08-29T12:51:58+09:00 logger.go:66: Destroy complete! Resources: 2 destroyed.
 ```
+
